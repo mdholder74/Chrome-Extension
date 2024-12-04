@@ -4,13 +4,23 @@ const inputEl = document.querySelector("#input-el")
 const inputBtn = document.querySelector("#input-btn")
 const ulEl = document.querySelector("#ul-el")
 const deleteBtn = document.querySelector("#delete-btn")
+const tabBtn = document.querySelector("#tab-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+
 
 //THIS CHECKS IF THERE ARE LEADS IN LOCAL STORAGE, AND IF THERE ARE, IT ADDS THEM TO THE ARRAY
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+const tabs = [{
+    url: "https://www.linkedin.com/in/moeholder/"
+}]
+
+tabBtn.addEventListener("click", function() {
+    console.log(tabs[0].url)
+})
 
 //THIS RENDERS THE LIST OF LEADS, IN THE BROWSER.
     // Loop through each element in the array `myLeads`
