@@ -1,4 +1,4 @@
-let myLeads = ["www.awesomelead.com","www.epiclead.com","www.greatlead.com"];
+let myLeads = [];
 const inputEl = document.querySelector("#input-el")
 const inputBtn = document.querySelector("#input-btn")
 const ulEl = document.querySelector("#ul-el")
@@ -7,7 +7,9 @@ const ulEl = document.querySelector("#ul-el")
 //The <input> element has a special value property that stores the user-entered data.
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
-    console.log(myLeads) 
+    inputEl.value = "";//This clears the input field after the button is clicked
+    myLeads = JSON.stringify(myLeads);//This converts the array to a string
+    renderLeads() 
 })
 
 //THIS RENDERS THE LIST OF LEADS, IN THE BROWSER.
@@ -22,16 +24,22 @@ inputBtn.addEventListener("click", function() {
     //    - A `target='_blank'` attribute so that clicking the link opens it in a new browser tab.
     // 3. The anchor text (`${value}`) displays the URL as a clickable link.
     //    - `${value}` uses template literals to insert the current `value` into the HTML string.
-for (let value of myLeads) {
-    ulEl.innerHTML += `
+function renderLeads() {
+    let listItems = "";
+    for (let value of myLeads) {
+    listItems += `
     <li>
         <a href='${value}' target='_blank'> ${value} </a>
     </li>
     `
+    //ALTERNATIVE WAY TO ADD THE LEADS TO THE BROWSER PAGE
     // const li = document.createElement("li") 
     // li.textContent = value
     // ulEl.append(li)
-    
+
+    ulEl.innerHTML = listItems;
 }
+}
+
 
 
