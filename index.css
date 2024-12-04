@@ -21,12 +21,21 @@ button {
     background-color: #5f9341;
     color: white;
     font-weight: bold;
-    border: solid 1px #5f9341;
+    border: 1px solid #5f9341;
     margin: 10px 5px;
     padding: 10px 20px;
     border-radius: 50px;
-    border:none;
     
+}
+
+#delete-btn {
+    background-color: white;
+    color: #5f9341;
+    font-weight: bold;
+    border: 1px solid #5f9341;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border-radius: 50px;    
 }
 
 /* STYLE THE LIST ACCORDING TO THE DESIGN */
