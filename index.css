@@ -8,20 +8,37 @@ body{
 box-sizing: padding and border are included in the width
 */
 
+#title-header {
+    background-color: #2e8e86;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
 input {
+    background-color: rgba(234, 228, 228, 0.519);
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #5f9341;
+    border: 1px solid #2e8e86;
     margin: 15px 5px;
     padding: 10px 10px;
     border-radius: 50px;
 }
 
+#input-el::placeholder {
+    color: #2e8e86;
+    font-style: italic;
+    
+}
+
+
+
 button {
-    background-color: #5f9341;
+    background-color: #2e8e86;
     color: white;
     font-weight: bold;
-    border: 1px solid #5f9341;
+    border: 1px solid #2e8e86;
     margin: 10px 5px;
     padding: 10px 20px;
     border-radius: 50px;
@@ -30,9 +47,9 @@ button {
 
 #delete-btn {
     background-color: white;
-    color: #5f9341;
+    color: #379fa1;
     font-weight: bold;
-    border: 1px solid #5f9341;
+    border: 1px solid #2e8e86;
     margin: 10px 5px;
     padding: 10px 20px;
     border-radius: 50px;    
@@ -50,5 +67,5 @@ li {
 }
 
 a {
-    color: #5f9341;
+    color: #2e8e86;
 }
