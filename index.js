@@ -3,6 +3,13 @@ const inputEl = document.querySelector("#input-el")
 const inputBtn = document.querySelector("#input-btn")
 const ulEl = document.querySelector("#ul-el")
 
+let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+
+//THIS CHECKS IF THERE ARE LEADS IN LOCAL STORAGE, AND IF THERE ARE, IT ADDS THEM TO THE ARRAY
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
 //THIS GETS THE VALUE FROM THE INPUT FIELD, WHEN THE BUTTON IS CLICKED, AND ADDS IT TO THE ARRAY
 //The <input> element has a special value property that stores the user-entered data.
 inputBtn.addEventListener("click", function() {
