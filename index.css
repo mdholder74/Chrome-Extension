@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* width: 100%; 100% of the parent element 
+box-sizing: padding and border are included in the width
+*/
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #5f9341;
+    margin: 15px 5px;
+    padding: 10px 10px;
+    border-radius: 50px;
+}
+
+button {
+    background-color: #5f9341;
+    color: white;
+    font-weight: bold;
+    border: solid 1px #5f9341;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border:none;
+    
+}
